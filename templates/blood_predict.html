@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Finding Right Donor</title>
+  </head>
+
+  <body>
+    <center>
+      <h1>Finding Right Donor</h1>
+      <form action="{{url_for ('predict')}}" method="post">
+        Recency
+        <input
+          type="text"
+          name="Recency"
+          id="Recency"
+          placeholder="Recency"
+        /><br /><br />
+        Months Since Last Donation
+        <input
+          type="text"
+          name="Months since Last Donation"
+          id="Months since Last Donation"
+          placeholder="Months since Last Donation"
+        /><br /><br />
+        Number of Donations
+        <input
+          type="text"
+          name="Number of Donations"
+          id="Number of Donations"
+          placeholder="Number of Donations"
+        /><br /><br />
+        Total Volume Donated (c.c.)
+        <input
+          type="text"
+          name="Total Volume Donated (c.c.)"
+          id="Total Volume Donated (c.c.)"
+          placeholder="Total Volume Donated (c.c.)"
+        /><br /><br />
+        Months Since First Donation
+        <input
+          type="text"
+          name="Months since First Donation"
+          id="Months since First Donation"
+          placeholder="Months since First Donation"
+        /><br /><br />
+        <button type="submit">Predict</button>
+      </form>
+      {{ prediction_text }}
+    </center>
+  </body>
+</html>
